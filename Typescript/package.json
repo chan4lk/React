@@ -1,0 +1,24 @@
+{
+  "name": "typescript-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lite": "lite-server",
+    "serve": "npm run lite",
+    "webpack": "webpack",
+    "start": "concurrent \"npm run webpack\" \"npm run lite\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "react": "0.14.7",
+    "react-dom": "0.14.7"
+  },
+  "devDependencies": {
+    "source-map-loader": "0.1.5",
+    "ts-loader": "0.8.1"
+  }
+}
