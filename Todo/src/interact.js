@@ -17,6 +17,11 @@ var Counter = React.createClass({
             counter: 0
         };
     },
+    getDefaultProps: function(){
+        return{
+            name: 'Counter'
+        };
+    },
     handleIncrement: function () {
         /** Update counter state */
         this.setState({ counter: this.state.counter + 1 });
@@ -41,6 +46,9 @@ var Counter = React.createClass({
 });
 
 ReactDOM.render(
-    <Counter name="Hello"/>,
+    <div>
+        <Counter name="Hello"/>
+        <Counter/>
+    </div>,
     document.getElementById('container')
 );
