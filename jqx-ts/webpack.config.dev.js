@@ -28,10 +28,10 @@ module.exports = {
       'node_modules',
       path.join(__dirname, 'node_modules')
     ],
-    extensions: ['.js', '.jsx', '.json']
+    extensions: ['.js', '.jsx', '.ts', '.tsx', '.json']
   },
   entry: [
-    
+
     'react-hot-loader/patch',
     // activate HMR for React
 
@@ -62,12 +62,12 @@ module.exports = {
         }
       },
       {
-        test: /\.(ts|tsx)$/,
-        loaders: [require.resolve('babel-loader'), require.resolve('ts-loader')],
+        test: /\.tsx?$/,
+        loaders: [require.resolve('babel-loader'), require.resolve('awesome-typescript-loader')],
         exclude: /node_modules/
       },
       {
-        test: /\.(js|jsx)$/,
+        test: /\.jsx?$/,
         loader: require.resolve('babel-loader'),
         exclude: /node_modules/
       }

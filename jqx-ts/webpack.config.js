@@ -29,7 +29,7 @@ module.exports = (options) => {
         'node_modules',
         path.join(__dirname, 'node_modules')
       ],
-      extensions: ['.js', '.jsx', '.json']
+      extensions: ['.js', '.jsx', '.ts', '.tsx', '.json']
     },
     entry: options.entryPoints,
       // 'react-hot-loader/patch',
