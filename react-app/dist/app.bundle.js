@@ -993,6 +993,8 @@ var Hello = function (_Component) {
 exports.default = Hello;
 
 
+var a = 8;
+
 (0, _reactDom.render)(_react2.default.createElement(Hello, null), document.getElementById('app'));
 
 /***/ }),

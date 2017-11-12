@@ -16,7 +16,7 @@ const HtmlWebpackPluginConfig = new HtmlWebpackPlugin({
 
 const ExtractTextPluginConfig = new ExtractTextPlugin('style.bundle.css');
 
-const config = {
+module.exports = {
     entry: path.join(paths.js, 'app.js'),
     output: {
         path:  paths.dist,
@@ -26,13 +26,13 @@ const config = {
         extensions: ['.js', '.jsx']
     },
     module: {
+        
         rules: [
             { test: /\.(js|jsx)$/, use: 'babel-loader', exclude: /node_modules/},
+            { test: /\.(js|jsx)$/, use: 'eslint-loader', enforce: 'pre'},
             { test: /\.css$/, loader: ExtractTextPlugin.extract({use: 'css-loader'})},
             { test: /\.(png|jpg|gif)$/, use: 'file-loader'},
         ]
     },
     plugins: [HtmlWebpackPluginConfig, ExtractTextPluginConfig]
 };
-
-module.exports = config;

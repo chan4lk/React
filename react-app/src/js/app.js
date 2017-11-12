@@ -16,4 +16,6 @@ export default class Hello extends Component {
     }
 }
 
+const a = 8;
+
 render(<Hello />, document.getElementById('app'));
