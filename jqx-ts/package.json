@@ -44,7 +44,7 @@
     "webpack-dev-server": "^2.7.1"
   },
   "dependencies": {
-    "jquery": "^3.2.1",
+    "jquery": "^3.4.0",
     "jqwidgets-framework": "^5.0.0",
     "react": "^15.6.1",
     "react-dom": "^15.6.1"
