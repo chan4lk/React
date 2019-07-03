@@ -9,7 +9,9 @@
     "open:src": "babel-node tools/srcServer.js",
     "lint:w": "npm run lint -- --watch",
     "test": "mocha --reporter progress tools/testSetup.js \"src/**/*.spec.js\"",
-    "test:w": "npm run test -- --watch"
+    "test:w": "npm run test -- --watch",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "author": "Chandima Ranaweera",
   "license": "MIT",
@@ -24,7 +26,8 @@
     "react-router-redux": "4.0.4",
     "redux": "3.5.2",
     "redux-thunk": "2.0.1",
-    "toastr": "2.1.2"
+    "toastr": "2.1.2",
+    "snyk": "^1.189.0"
   },
   "devDependencies": {
     "babel-cli": "6.8.0",
@@ -67,5 +70,6 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/coryhouse/pluralsight-redux-starter"
-  }
+  },
+  "snyk": true
 }
